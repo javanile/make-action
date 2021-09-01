@@ -16,7 +16,7 @@ outputs:
 runs:
   using: docker
   image: docker://javanile/bash-ci:5.1.4
-  entrypoint: entrypoint.sh
+  entrypoint: /github/workflow/entrypoint.sh
 
 branding:
   icon: package
