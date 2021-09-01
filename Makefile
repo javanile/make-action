@@ -1,3 +1,3 @@
 
 permissions:
-	@git update-index --chmod=+x entrypoint.sh
+	@git update-index --skip-worktree --chmod=+x entrypoint.sh
