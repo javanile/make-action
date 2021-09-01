@@ -1,5 +1,5 @@
 FROM javanile/bash-ci:5.1.4
 
-COPY ./entrypoint.sh /usr/local/bin/
+COPY ./entrypoint0.sh /usr/local/bin/
 
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["entrypoint0.sh"]
