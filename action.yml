@@ -1,0 +1,23 @@
+name: Make Action
+description: Execute Makefile target based on workflow job name.
+
+author: Francesco Bianco <bianco@javanile.org>
+
+inputs:
+  args:
+    description: Args
+    required: false
+    default: ''
+
+outputs:
+  exit_code:
+    description: The exit code with which the execution ends.
+
+runs:
+  using: docker
+  image: docker://javanile/bash-ci:5.1.4
+  entrypoint: entrypoint.sh
+
+branding:
+  icon: package
+  color: orange

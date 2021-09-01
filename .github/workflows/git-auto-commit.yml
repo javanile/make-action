@@ -1,0 +1,22 @@
+name: git-auto-commit
+
+on: push
+
+jobs:
+  git-auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use git-auto-commit-action
+      id: "make-action"
+      uses: ./
+
+    - name: "no errors detected"
+      if: steps.make-action.exit_code == 0
+      run: "echo \"No errors detected\""
+
+    - name: "some errors detected"
+      if: steps.make-action.exit_code == 1
+      run: "echo \"Some errors detected\""
